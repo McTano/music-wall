@@ -1,0 +1,5 @@
+<% @tracks.each do |track| %>
+  <div class="tracks">
+    <a href="<%= track.url ? track.url : 'http://google.com' %>"><h3><%= track.title %></a> <small>(<%= track.author %>)</small></h3>
+  </div>
+<% end %>
