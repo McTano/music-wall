@@ -1,6 +1,17 @@
+<head>
+  <title>Unchaperoned Song Party</title>
+</head>
+  <div class="container">
+    <h1>Unchaperoned Song Party</h1>
+  </div>
 <% @tracks.each do |track| %>
-  <div class="tracks">
-    <a href="<%= track.url || 'https://www.google.com/' %>"><h3><%= track.title %></a> <small>(<%= track.author %>)</small></h3>
+  <div class="container">
+    <divc lass="tracks">
+      <a href="<%= track.url || 'https://www.google.com/' %>"><h3><%= track.title %></a> <small>(<%= track.artist %>)</small></h3>
+      <p>Submitted by: <%= track.author %></p>
+    </div>
   </div>
 <% end %>
-<a href="/tracks/new">Post a sweet track.</a>
+<div class="container">
+  <a class="btn btn-primary btn-lg" href="/tracks/new">Post a sweet track.</a>
+</div>

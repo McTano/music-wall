@@ -16,6 +16,7 @@ end
 post '/tracks' do
   @track = Track.new(
     title: params[:title],
+    artist: params[:artist],
     author: params[:author],
     url: params[:url]
   )

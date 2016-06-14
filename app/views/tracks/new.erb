@@ -1,0 +1,33 @@
+<% if @track.errors.any? %>
+  <div>
+    <strong>Some issues with your submission, please fix them:</strong>
+    <ul>
+      <% @track.errors.full_messages.each do |track| %>
+        <li><%= track %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<form method="post" action="/tracks">
+  <div>
+    <label>Title:</label>
+    <input type="text" name="title">
+  </div>
+  <div>
+    <label>Artist:</label>
+    <input type="text" name="artist">
+  </div>
+  <div>
+    <label>Submitted by:</label>
+    <input type="text" name="author">
+  </div>
+  <div>
+    <label>url:</label>
+    <input type="text" name="url">
+  </div>
+  <div>
+    <label
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+</form>
